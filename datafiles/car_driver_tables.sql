@@ -56,7 +56,7 @@ CREATE TABLE `expenses`(
 
 CREATE TABLE `notification`(
 	`id_notification` int NOT NULL,
-    `type` varchar(45) DEFAULT NULL,
+    `type_n` varchar(45) DEFAULT NULL,
     `message` varchar(100) DEFAULT NULL,
     `to_date` DATE,
     `is_read` BOOLEAN,
