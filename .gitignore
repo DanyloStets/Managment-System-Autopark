@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.cpython-*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# Frontend dependencies and build
+frontend/node_modules/
+frontend/dist/

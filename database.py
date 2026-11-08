@@ -1,9 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "mysql+pymysql://root:root@localhost:3306/car_managment_db"
+DATABASE_URL = "mysql+pymysql://root:root@localhost:3306/car_managment"
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+# Для MySQL параметр connect_args не потрібен
+engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
